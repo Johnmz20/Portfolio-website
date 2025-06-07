@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" type="text/css" href="css/style.production.css" >
+        <link rel="shortcut icon" href="./photo/turtle.svg" >
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet" >
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" >
+        <title>JM WEB-about</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+    </head>
+    <body> 
+        <header class="page-header">
+  <img src="./photo/turtle.svg" alt="logo" height="90" width="90" />
+  <nav>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="navigation-list">
+      <li><a href="index.html" class="navigation-list__item">Home</a></li>
+      <li><a href="about.html" class="navigation-list__item">About me</a></li>
+      <li><a href="work.html" class="navigation-list__item">Work</a></li>
+      <li><a href="contact.html" class="navigation-list__item">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+        <main class="about-me__block">
+             <div class="text">
+                <section class="about-me-modern">
+  <div class="about-text">
+    <h2>John Meraz</h2>
+    <p class="about-subtitle">But you can call me John</p>
+    <p>Hi, I’m John Meraz, a software engineer passionate about building user-centered applications and collaborating on projects that make a real impact. With hands-on experience in full-stack development, data-driven projects, and machine learning, I thrive on solving problems and finding creative solutions. I’m fluent in both English and Spanish, and I’m committed to learning and growing in a dynamic, team-focused environment. When I’m not coding, I enjoy fishing trips that inspire some of my side projects!</p>
+    <div class="cvDIV">
+                <a href="files/John_Meraz_Software_Engineer_Resume_2025 (3).pdf" class="button" download >Download my CV</a>
+            </div>
+  </div>
+
+  <div class="about-image">
+    <img src="./photo/fishing_blue.jpeg" alt="John Meraz's photo" />
+  </div>
+</section>
+
+
+
+            <h2>Experience</h2>
+            <div class="grid__about">
+            <table class="about-me-table">
+                <!--job history-->
+                <thead>
+                    <tr>
+                        <th>Job History</th>
+                        <th>Time Employed</th>
+                        <th>Job Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aramark retail staff</td>
+                        <td>1 Year</td>
+                        <td>as retail staff each day i was part of a team who helped customers around the store finding items they would like to purchase.</td>
+                    </tr>
+                    <tr>
+                        <td>Uber delivery</td>
+                        <td>2 Years</td>
+                        <td>during the pandemic i road my bike across queens delivering food or groceries to people who ordered on the uber eats app.</td>
+                    </tr>
+                    <tr>
+                        <td>NYtails Dog walker</td>
+                        <td>1 Year</td>
+                        <td>Each day I was given a specific time and place to walk someone's dog and follow any information the owner left for me. When I finished each walk, I would update the owner on what business their dog did.</td>
+                    </tr>
+                    <tr>
+                        <td>SYEP camp counselor assistant</td>
+                        <td>4 Years</td>
+                        <td>
+                            The summer youth employment program let me have a job during high school, I always picked being a summer camp counselor assistant. My job was to watch over the group of kids with a camp counselor helping with
+                            homework and making sure they were having fun.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <p>find me on</p>
+            <div class="social-media">
+                <a href="https://github.com/Johnmz20" target="_blank">
+                    <img src="photo/github_icon.svg" alt="github" >
+                </a>
+                <a href="https://www.instagram.com/johnn.mz/" target="_blank">
+                    <img src="photo/instagram.svg" alt="instagram" >
+                </a>
+                <a href="https://www.linkedin.com/in/john-meraz-a942b6172/" target="_blank">
+                    <img src="photo/linkedin_icon.svg" alt="linkedin" >
+                </a>
+            </div>
+          </footer>
+        <!-- Burger Menu Toggle Script -->
+  <script>
+  function toggleMenu() {
+    document.querySelector('.navigation-list').classList.toggle('active');
+  }
+</script>
+
+  <!-- Tota11y Accessibility Script -->
+  <script src="js/tota11y.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,706 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+:root{
+    --primary-background-color: #b0d5f5;
+    --secondary-background-color: #2f3f5f;
+    --link-color: #035359;
+    --link-color-active: #ff8c00;
+    --Button-background-color:rgb(110, 110, 233);
+    --Button-color: hsl(0, 0%, 100%);
+    --Button-border-bottom-color: rgb(3, 3, 3);
+    --Button-color-active:lightblue;
+    --h1-color:#272750;
+    --h2-color:#483d8b;
+    --h3-color:#483d8b;
+    --p-color:#0c0b0b;
+    --td-color:#0c0b0b;
+    --grid-about-color:#bcc1c659;
+    --grid-about-shadow-color: rgba(0, 0, 0, 0.1);
+    --about-me-table-border:#100f0f;
+    --about-me-table-background:#bed3ee;
+    --about-me-table-th:rgb(122, 181, 187);
+    --navigation-list-item-color:#333;
+    --navigation-list-item-background:#007bff;
+    --navigation-list-item-hover:#007bff;
+    --page-header-background:#bcc1c659;
+    --page-header-shadow:rgba(0, 0, 0, 0.2);
+    --profile-background-color:#bcc1c659;
+    --profile-shadow-color:rgba(0, 0, 0, 0.1);
+    --fire-color-1:#edc655;
+    --fire-color-2:#fcffad;
+    --fire-color-3:#f76414;
+    --moon-color-1:#565756;
+    --moon-color-2:#9b9e9b;
+    --moon-color-3:#fff;
+    --star-color-1:#ededed;
+    --star-color-2:#fcfcfc;
+    --star-color-3:#fff;
+    --Contact-grid-items-background:#6da8ec49;
+    --Contact-grid-items-shadow:rgba(0, 0, 0, 0.1);
+  }
+  a {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--link-color)
+  }
+  a:hover,
+  a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+  a:active {
+    /* selected link */
+    color: var(--link-color-active)
+  }
+  body {
+    /* background-color: #F5F5F5;*/
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--primary-background-color)), to(var(--secondary-background-color)));
+    background: linear-gradient(to bottom, var(--primary-background-color), var(--secondary-background-color)),   url('./photo/subtle-texture.png') repeat; /*#F5F5F5, #333333*/
+    /* Adjust the colors as needed */
+    min-height: 100vh;
+  }
+  button,
+  .button {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--Button-background-color);
+  color: var(--Button-color);
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--Button-border-bottom-color);
+  transition: opacity 0.2s;
+  white-space: normal;
+}
+  button:active {
+    background-color: var(--Button-color-active);
+  }
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  /*headers and paragraphs*/
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 70px !important;
+    font-weight: 400;
+    color: var(--h1-color);
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 1s ease forwards;
+            animation: fadeInAnimation 1s ease forwards; /* Apply the fade-in animation */
+  }
+  h2 {
+    font-size: 60px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--h2-color);
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 1s ease forwards;
+            animation: fadeInAnimation 1s ease forwards; /* Apply the fade-in animation */
+  }
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--h3-color);
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 1s ease forwards;
+            animation: fadeInAnimation 1s ease forwards; /* Apply the fade-in animation */
+  }
+  p {
+    color: var(--p-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 1s ease forwards;
+            animation: fadeInAnimation 1s ease forwards; /* Apply the fade-in animation */
+  }
+  td {
+    color: var(--td-color);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: italic;
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 1s ease forwards;
+            animation: fadeInAnimation 1s ease forwards; /* Apply the fade-in animation */
+  }
+  /*about me page*/
+  .about-me__block {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .cvDIV {
+    margin: 20px 0 10px 0;
+    padding-top: 10px;
+  }
+  .grid__about {
+    display: block;
+    background-color: var(--grid-about-color);
+    padding: 10px 20px;
+    border-radius: 2%;
+    -webkit-box-shadow: 0 4px 8px var(--grid-about-shadow-color);
+            box-shadow: 0 4px 8px var(--grid-about-shadow-color); /* Add shadow */
+  }
+  .hobby_portait {
+    float: right;
+    width: 250px;
+    margin-right: 40px;
+    height: auto;
+    border-radius: 50%;
+    padding-top: 30px;
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 2s ease forwards;
+            animation: fadeInAnimation 2s ease forwards; /* Apply the fade-in animation */
+  }
+  /*about me table*/
+  .about-me-table {
+    border-collapse: collapse;
+  }
+  .about-me-table th,
+  .about-me-table td {
+    padding: 10px;
+    border: 4px solid var(--about-me-table-border);
+    background-color: var(--about-me-table-background);
+  }
+  .about-me-table th {
+    background-color: var(--about-me-table-th);
+  }
+  .about-me-table tbody tr {
+    opacity: 0; /* Initially hide rows */
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; /* Add transition for smooth fade-in */
+  }
+  /* Animation to fade in rows when they appear on the screen */
+  .about-me-table tbody tr:nth-child(1) {
+    -webkit-animation: fadeIn 0.5s ease 0.3s forwards;
+            animation: fadeIn 0.5s ease 0.3s forwards;
+  }
+  .about-me-table tbody tr:nth-child(2) {
+    -webkit-animation: fadeIn 0.5s ease 0.6s forwards;
+            animation: fadeIn 0.5s ease 0.6s forwards;
+  }
+  .about-me-table tbody tr:nth-child(3) {
+    -webkit-animation: fadeIn 0.5s ease 0.9s forwards;
+            animation: fadeIn 0.5s ease 0.9s forwards;
+  }
+  .about-me-table tbody tr:nth-child(4) {
+    -webkit-animation: fadeIn 0.5s ease 1.2s forwards;
+            animation: fadeIn 0.5s ease 1.2s forwards;
+  }
+  /* Add more animations for additional rows */
+  @-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  /*Work page*/
+  .grid__items {
+    display: inline-block;
+  }
+  /* grid display in work page */
+  @supports (display: grid) {
+    .grid {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        /* grid-template-rows: 300px 300px;*/
+    }
+    @media all and (min-width: 500px) and (max-width: 750px) {
+        .grid {
+            -ms-grid-columns: 1fr 20px 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media all and (max-width: 750px) {
+        .grid {
+            grid-gap: 10px;
+        }
+    }
+    @media all and (max-width: 500px) {
+        .grid {
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+    .grid__items {
+        background-color: #bed3ee;
+        /* padding: 10px 20px;*/
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        height: auto !important;
+        border-radius: 2%;
+        opacity: 0; /* Initially hide projects */
+        -webkit-transition: opacity 5s ease;
+        transition: opacity 5s ease; /* Add transition for smooth fade-in */
+        -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Add shadow */
+        cursor: pointer;
+    }
+    .grid__items:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+        background-color: #aac8ef; /* Light up color */
+        -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Light up shadow */
+    }
+    .grid__items img {
+        max-width: 100%; /* Ensure images don't exceed their container's width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    /*.grid__items:last-child {
+      grid-column: 3 / 3;
+      grid-row: 1 / 3;
+  }*/
+    .grid .grid__items:nth-child(1) {
+        -webkit-animation: fadeIn 0.5s ease 0.3s forwards;
+                animation: fadeIn 0.5s ease 0.3s forwards;
+    }
+    .grid .grid__items:nth-child(2) {
+        -webkit-animation: fadeIn 0.5s ease 0.6s forwards;
+                animation: fadeIn 0.5s ease 0.6s forwards;
+    }
+    .grid .grid__items:nth-child(3) {
+        -webkit-animation: fadeIn 0.5s ease 0.9s forwards;
+                animation: fadeIn 0.5s ease 0.9s forwards;
+    }
+    .grid .grid__items:nth-child(4) {
+        -webkit-animation: fadeIn 0.5s ease 1.2s forwards;
+                animation: fadeIn 0.5s ease 1.2s forwards;
+    }
+    .grid .grid__items:nth-child(5) {
+        -webkit-animation: fadeIn 0.5s ease 1.5s forwards;
+                animation: fadeIn 0.5s ease 1.5s forwards;
+    }
+    .grid .grid__items:nth-child(6) {
+        -webkit-animation: fadeIn 0.5s ease 1.8s forwards;
+                animation: fadeIn 0.5s ease 1.8s forwards;
+    }
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+  }
+  .grid__index {
+    display: -ms-grid;
+    display: grid;
+    padding: 80px;
+  }
+  .main-move {
+    padding: 0 40px;
+  }
+  @-webkit-keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  @keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  .page-footer {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+  .profile {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--profile-background-color);
+    padding: 10px 20px;
+    border-radius: 2%;
+    -webkit-box-shadow: 0 4px 8px var(--profile-shadow-color);
+            box-shadow: 0 4px 8px var(--profile-shadow-color); /* Add shadow */
+  }
+  .profile_portait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    height: auto;
+    border-radius: 50%;
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 2s ease forwards;
+            animation: fadeInAnimation 2s ease forwards; /* Apply the fade-in animation */
+  }
+  .work-header {
+    padding: 0 40px;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  /* fire color change */
+  @-webkit-keyframes color-change-1 {
+    0% {
+        fill: var(--fire-color-1);
+    }
+    50% {
+        fill: var(--fire-color-2);
+    }
+    100% {
+        fill: var(--fire-color-3);
+    }
+  }
+  @keyframes color-change-1 {
+    0% {
+        fill: var(--fire-color-1);
+    }
+    50% {
+        fill: var(--fire-color-2);
+    }
+    100% {
+        fill: var(--fire-color-3);
+    }
+  }
+  /* moon color brightness */
+  .M {
+    -webkit-animation: 4s color-change-1 infinite alternate linear;
+            animation: 4s color-change-1 infinite alternate linear;
+  }
+  @-webkit-keyframes color-change-2 {
+    0% {
+        fill: var(--moon-color-1);
+    }
+    50% {
+        fill: var(--moon-color-2);
+    }
+    100% {
+        fill: var(--moon-color-3);
+    }
+  }
+  @keyframes color-change-2 {
+    0% {
+        fill: var(--moon-color-1);
+    }
+    50% {
+        fill: var(--moon-color-2);
+    }
+    100% {
+        fill: var(--moon-color-3);
+    }
+  }
+  /* star twinkle */
+  .j {
+    -webkit-animation: 4s color-change-2 infinite alternate linear;
+            animation: 4s color-change-2 infinite alternate linear;
+  }
+  @-webkit-keyframes color-change-3 {
+    0% {
+        fill: var(--star-color-1);
+    }
+    50% {
+        fill: var(--star-color-2);
+    }
+    100% {
+        fill: var(--star-color-3);
+    }
+  }
+  @keyframes color-change-3 {
+    0% {
+        fill: var(--star-color-1);
+    }
+    50% {
+        fill: var(--star-color-2);
+    }
+    100% {
+        fill: var(--star-color-3);
+    }
+  }
+  .h {
+    -webkit-animation: 4s color-change-3 infinite alternate linear;
+            animation: 4s color-change-3 infinite alternate linear;
+  }
+  .hobby_portait {
+    float: right;
+    width: 250px;
+    margin-right: 40px;
+    height: auto;
+    border-radius: 50%;
+    padding-top: 30px;
+    opacity: 0; /* Initially hide the element */
+    -webkit-animation: fadeInAnimation 2s ease forwards;
+            animation: fadeInAnimation 2s ease forwards; /* Apply the fade-in animation */
+  }
+  .Contact_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .Contact_grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+  .Contact_grid_items {
+    background-color: var(--Contact-grid-items-background);
+    padding: 25px;
+    height: auto !important;
+    border-radius: 2%;
+    -webkit-box-shadow: 0 4px 8px var(--Contact-grid-items-shadow) !important;
+            box-shadow: 0 4px 8px var(--Contact-grid-items-shadow) !important; /* Add shadow */
+    cursor: pointer;
+  }
+  .text {
+    font-size: 24px;
+    opacity: 0;
+    -webkit-animation: pop-up 0.5s ease forwards;
+            animation: pop-up 0.5s ease forwards; /* Animation to make text pop up */
+  }
+  @-webkit-keyframes pop-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px); /* Initial position below */
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); /* Final position */
+    }
+  }
+  @keyframes pop-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px); /* Initial position below */
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); /* Final position */
+    }
+  }
+  /* Add additional styling as needed */
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+}
+
+
+/* Final clean burger menu and header styles */
+/* Final clean burger menu and header styles */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: var(--page-header-background); /* use your existing variable */
+  box-shadow: 0 8px 12px var(--page-header-shadow); /* subtle shading */
+  border-radius: 8px;
+}
+
+.burger {
+  display: none; /* hide burger on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Nav links styling for desktop (in a row, no bullets) */
+.navigation-list {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Arrange links in a row */
+  justify-content: flex-end; /* Align to the right */
+  gap: 20px; /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual nav link styling */
+.navigation-list__item {
+  color: var(--navigation-list-item-color);
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 24px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline hover effect */
+.navigation-list__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--navigation-list-item-background);
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-list__item:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  opacity: 1;
+}
+
+.navigation-list__item:hover {
+  color: var(--navigation-list-item-hover);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    z-index: 1001; /* ensure it’s above */
+  }
+
+  .navigation-list {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--page-header-background);
+    box-shadow: 0 8px 12px var(--page-header-shadow);
+    border-radius: 8px;
+    position: absolute;
+    top: 10px; /* align vertically with burger */
+    right: 50px; /* 👈 show to the right of burger icon */
+    z-index: 1000;
+    gap: 10px;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  .navigation-list.active {
+    display: flex;
+  }
+}
+
+
+.about-me-modern {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 2rem; /* Increased padding for spacing */
+  background: var(--grid-about-color);
+   box-shadow: 0 8px 12px var(--page-header-shadow);
+
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  color: #080f66; /* Red highlight */
+  margin: 0;
+}
+
+.about-subtitle {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 400px; /* Prevent overly wide paragraphs */
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Ensure the section has some margin from the header */
+.about-me-modern {
+  margin-top: 2rem; /* Space from header */
+}
+
+/* Mobile-friendly stack layout */
+@media (max-width: 768px) {
+  .about-me-modern {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image {
+    margin-top: 1rem;
+  }
+}
